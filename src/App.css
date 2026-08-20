@@ -1,0 +1,261 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #e8ecf1;
+}
+
+.auth-card h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.auth-card .subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fafbfc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    background: #ffffff;
+}
+
+.form-group input.error {
+    border-color: #ef4444;
+}
+
+.form-group input.error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.validation-error {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+
+.btn-primary {
+    width: 100%;
+    padding: 11px;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #4338ca;
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-danger {
+    padding: 10px 24px;
+    background: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+/* ===== MESSAGES ===== */
+.error-message {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #fecaca;
+}
+
+.success-message {
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #bbf7d0;
+}
+
+/* ===== LINKS ===== */
+.auth-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.auth-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.dashboard-card {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #e8ecf1;
+}
+
+.dashboard-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.dashboard-card .welcome-text {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.user-info {
+    background: #f8fafc;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    border: 1px solid #e8ecf1;
+}
+
+.user-info p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.user-info strong {
+    color: #1a1a2e;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.loading {
+    text-align: center;
+    color: #6b7280;
+    font-size: 16px;
+    padding: 40px;
+}
+
+
+@media (max-width: 480px) {
+    .auth-card,
+    .dashboard-card {
+        padding: 28px 20px;
+    }
+    
+    .dashboard-actions {
+        flex-direction: column;
+    }
+    
+    .btn-danger {
+        width: 100%;
+    }
+}
