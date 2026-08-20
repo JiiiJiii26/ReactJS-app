@@ -1,6 +1,7 @@
 package edu.cit.pena.activity01.config;
 
-import edu.cit.pena.activity01.service.CustomUserDetailsService;
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
+import edu.cit.pena.activity01.service.CustomUserDetailsService;
 
 @Configuration
 @EnableWebSecurity
@@ -32,7 +33,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/login").permitAll()
                 .anyRequest().authenticated()
             )
-            .userDetailsService(customUserDetailsService)  
+            .userDetailsService(customUserDetailsService)
             .httpBasic(httpBasic -> {});
 
         return http.build();
